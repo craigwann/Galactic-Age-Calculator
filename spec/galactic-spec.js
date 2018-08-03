@@ -36,4 +36,24 @@ describe('Galactic', function() {
     expect(oldPerson.oldAge()).toEqual(50);
   });
 
+  it('should test a male person life expectancy to go', function() {
+    let oldPerson = new Galactic('June 22,1968');
+    expect(oldPerson.lifeExp("male")).toEqual("26 years to go");
+  });
+
+  it('should test a male person life expectancy over target', function() {
+    let oldPerson = new Galactic('June 22,1938');
+    expect(oldPerson.lifeExp("male")).toEqual("4 years past");
+  });
+
+  it('should test a female person life expectancy to go', function() {
+    let oldPerson = new Galactic('June 22,1968');
+    expect(oldPerson.lifeExp("female")).toEqual("31 years to go");
+  });
+
+  it('should test a female person life expectancy over target', function() {
+    let oldPerson = new Galactic('June 22,1928');
+    expect(oldPerson.lifeExp("female")).toEqual("9 years past");
+  });
+
 });

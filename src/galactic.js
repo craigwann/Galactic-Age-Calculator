@@ -34,9 +34,32 @@ export class Galactic{
   }
 
   oldAge(){
-    var ageDifMs = parseInt(this.today - this.birthDate);
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
+    let ageDifMs = parseInt(this.today - this.birthDate);
+    let ageDate = new Date(ageDifMs); // miliseconds from epoch
+    let realAge =  Math.abs(ageDate.getUTCFullYear() - 1970);
+    return realAge;
+  }
+
+  lifeExp(sex){
+    const male = 76;
+    const female = 81;
+
+    let ageDifMs = parseInt(this.today - this.birthDate);
+    let ageDate = new Date(ageDifMs); // miliseconds from epoch
+    let realAge =  Math.abs(ageDate.getUTCFullYear() - 1970);
+
+    if (sex === "male" && realAge < male) {
+      return male - realAge + " years to go";
+    }
+    else if (sex === "male" && realAge > male) {
+      return  realAge - male + " years past";
+    }
+    else if (sex === "female" && realAge < female) {
+      return female - realAge + " years to go";
+    }
+    else if (sex === "female" && realAge > female) {
+      return  realAge - female + " years past";
+    }
   }
 
 
