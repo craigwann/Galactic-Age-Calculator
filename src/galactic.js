@@ -14,13 +14,23 @@ export class Galactic{
   }
 
   mercury(){
-    let mercuryAge = this.age * .24;
+    let mercuryAge = this.age / .24;
     return mercuryAge;
   }
 
+  venus(){
+    let venusAge = this.age / .62;
+    return venusAge;
+  }
+
   mars(){
-    let marsAge = this.age * .62;
+    let marsAge = this.age / 1.88;
     return marsAge;
+  }
+
+  jupiter(){
+    let jupiterAge = this.age / 11.86;
+    return jupiterAge;
   }
 
 
