@@ -9,10 +9,19 @@ export class Galactic{
     return this.age;
   }
   getAgeSeconds() {
-    let seconds = parseInt((this.today - this.birthDate)/1000)
+    let seconds = parseInt((this.today - this.birthDate)/1000);
     return seconds;
   }
 
+  mercury(){
+    let mercuryAge = this.age * .24;
+    return mercuryAge;
+  }
+
+  mars(){
+    let marsAge = this.age * .62;
+    return marsAge;
+  }
 
 
 

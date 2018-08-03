@@ -15,4 +15,12 @@ describe('Galactic', function() {
     expect(reusableDate.getAgeSeconds()).toEqual(572313600);
   });
 
+  it('should test a persons age in Mercury years', function() {
+    expect(reusableDate.mercury()).toEqual(4.32);
+  });
+
+  it('should test a persons age in Mars years', function() {
+    expect(reusableDate.mars()).toEqual(11.16);
+  });
+
 });
