@@ -1,12 +1,14 @@
+import { Galactic } from './../src/galactic.js';
+
 describe('Galactic', function() {
-  var reusableAge;
+//   var reusableDate;
+//
+//   beforeEach(function() {
+//     reusableDate = new Galactic('June 14,2000');
+//   });
 
-  beforeEach(function() {
-    reusableAge = new Galactic(35);
-  });
 
-
-  it('should test a persons age in seconds', function() {
-    var new
+  it('should test a persons age', function() {
+    // expect(reusableDate.getAge()).toEqual(18);
   });
 });
