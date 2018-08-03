@@ -31,4 +31,9 @@ describe('Galactic', function() {
     expect(reusableDate.jupiter()).toEqual(1.5177065767284992);
   });
 
+  it('should test a persons age in years born before January 1, 1970', function() {
+    let oldPerson = new Galactic('June 22,1968');
+    expect(oldPerson.oldAge()).toEqual(50);
+  });
+
 });

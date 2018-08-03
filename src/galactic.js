@@ -33,6 +33,12 @@ export class Galactic{
     return jupiterAge;
   }
 
+  oldAge(){
+    var ageDifMs = parseInt(this.today - this.birthDate);
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+
 
 
 }
